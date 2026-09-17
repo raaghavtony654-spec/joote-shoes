@@ -65,13 +65,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 overlay.style.pointerEvents = 'none';
             }
             
-            // 1. Start cinematic golden shimmer & bloom animation
+            // 1. Start smooth cursive writing from left to right
             setTimeout(() => {
                 if (logoContainer) logoContainer.classList.add('active');
-                if (loaderLogo) loaderLogo.classList.add('revealing');
-            }, 150);
+                if (loaderLogo) loaderLogo.classList.add('writing');
+            }, 200);
             
-            // 2. Fly to top-left after shimmer & bloom completes
+            // 2. Fly to top-left after cursive writing completes
             setTimeout(() => {
                 if (targetLogo && loaderLogo) {
                     const targetRect = targetLogo.getBoundingClientRect();
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (initialLoader) initialLoader.remove();
                     sessionStorage.setItem('jooteLoaded', 'true');
                 }
-            }, 2250); // 150ms delay + 1800ms shimmer + 300ms pause
+            }, 2950); // 200ms start delay + 2400ms writing + 350ms pause
             
         } else {
             // Already loaded this session, remove loader immediately

@@ -294,11 +294,11 @@ body.scrolled .nav {
     position: absolute;
     width: 380px;
     height: 220px;
-    background: radial-gradient(ellipse at center, rgba(201, 162, 74, 0.22) 0%, rgba(201, 162, 74, 0.06) 50%, transparent 75%);
+    background: radial-gradient(ellipse at center, rgba(201, 162, 74, 0.2) 0%, rgba(201, 162, 74, 0.05) 50%, transparent 75%);
     pointer-events: none;
     opacity: 0;
-    transform: scale(0.7);
-    transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scale(0.8);
+    transition: opacity 1.8s ease-out, transform 2.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .loader-logo-container.active::before {
@@ -312,50 +312,28 @@ body.scrolled .nav {
     font-weight: 700;
     letter-spacing: 0.05em;
     line-height: 0.8;
+    color: var(--brand-gold);
     display: inline-block;
     white-space: nowrap;
     position: relative;
     z-index: 1;
+    text-shadow: 0 0 25px rgba(201, 162, 74, 0.5), 0 0 50px rgba(201, 162, 74, 0.2);
     
-    /* Metallic Gold Shimmer Gradient */
-    background: linear-gradient(120deg, #C9A24A 0%, #E6C875 35%, #FFF6DD 50%, #E6C875 65%, #C9A24A 100%);
-    background-size: 250% 100%;
-    background-position: 100% 50%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    
-    /* Initial state: subtle blur and scale */
-    opacity: 0;
-    transform: scale(0.85);
-    filter: blur(10px) drop-shadow(0 0 35px rgba(201, 162, 74, 0.6));
-    transition: opacity 1s cubic-bezier(0.2, 0, 0, 1),
-                transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-                filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Left-to-right cursive writing wipe */
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 2.4s cubic-bezier(0.35, 0.1, 0.25, 1);
     transform-origin: center center;
-    will-change: transform, opacity, filter, background-position;
+    will-change: transform, clip-path;
 }
 
-.loader-logo-text.revealing {
-    opacity: 1;
-    transform: scale(1);
-    filter: blur(0px) drop-shadow(0 0 25px rgba(201, 162, 74, 0.45));
-    animation: goldShimmer 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@keyframes goldShimmer {
-    0% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.loader-logo-text.writing {
+    clip-path: inset(0 0% 0 0);
 }
 
 .loader-logo-text.moving {
     transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1),
-                filter 0.8s ease;
-    filter: blur(0px) drop-shadow(0 2px 15px rgba(0, 0, 0, 0.4));
+                text-shadow 0.8s ease;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* ── Base Styles ────────────────────────────────────── */
