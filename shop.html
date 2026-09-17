@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joote — Shop Handcrafted Sneakers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="scrolled">
+    <!-- Initial Loading Screen (Runs once per session) -->
+    <div id="initialLoader" class="initial-loader">
+        <div class="loader-logo-container">
+            <span id="loaderLogo" class="loader-logo-text">Joote</span>
+        </div>
+    </div>
+
+    <div class="page-transition" id="pageTransition"></div>
+
+    <!-- Background Layer (Noise) -->
+    <div class="noise-overlay"></div>
+    <div class="shop-bg"></div>
+
+    <!-- Fixed Pill Navigation (Always active via body.scrolled) -->
+    <nav class="nav" id="mainNav">
+        <div class="nav__logo">
+            <span class="nav__logo-main">Joote</span>
+            <span class="nav__logo-sub">INDIAN SNEAKERS</span>
+        </div>
+        <ul class="nav__links">
+            <li><a href="index.html" class="nav__link page-link">HOME</a></li>
+            <li><a href="index.html#aboutSection" class="nav__link page-link">ABOUT US</a></li>
+            <li><a href="shop.html" class="nav__link page-link active">SHOP</a></li>
+            <li><a href="index.html#aboutSection" class="nav__link page-link">CONTACT US</a></li>
+        </ul>
+        <button class="nav__cart" id="cartBtn" aria-label="Cart">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            <span class="nav__cart-badge">0</span>
+        </button>
+    </nav>
+
+    <main class="shop-page">
+        <!-- Featured Banner -->
+        <section class="shop-featured" id="shopFeatured"></section>
+
+        <header class="shop-header">
+            <h1 class="shop-title">The Collection</h1>
+            <p class="shop-subtitle">Authentic Indian crafts built for the streets.</p>
+        </header>
+
+        <div class="shop-grid" id="shopGrid">
+            <!-- Products will be injected here via shop.js -->
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="transition.js"></script>
+    <script src="shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor & IDE Files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Logs & Environment
+*.log
+.env
+.env.local
+
+# Node modules (if any tooling added)
+node_modules/
+npm-debug.log*

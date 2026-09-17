@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joote — Handcrafted Indian Sneakers</title>
+    <meta name="description" content="Joote — Handcrafted Indian Sneakers. Built Different. Walk Different. Indian Craft meets Modern Streetwear.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Initial Loading Screen (Runs once per session) -->
+    <div id="initialLoader" class="initial-loader">
+        <div class="loader-logo-container">
+            <span id="loaderLogo" class="loader-logo-text">Joote</span>
+        </div>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+        <div class="nav__logo">
+            <span class="nav__logo-main">Joote</span>
+            <span class="nav__logo-sub">INDIAN SNEAKERS</span>
+        </div>
+        <ul class="nav__links">
+            <li><a href="index.html" class="nav__link page-link active">HOME</a></li>
+            <li><a href="#aboutSection" class="nav__link">ABOUT US</a></li>
+            <li><a href="shop.html" class="nav__link page-link">SHOP</a></li>
+            <li><a href="#aboutSection" class="nav__link">CONTACT US</a></li>
+        </ul>
+        <button class="nav__cart" id="cartBtn" aria-label="Cart">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            <span class="nav__cart-badge">0</span>
+        </button>
+    </nav>
+    
+    <div class="hero-wrapper" id="heroWrapper">
+        <!-- Noise overlay for texture -->
+        <div class="noise-overlay"></div>
+
+        <!-- Dynamic background -->
+        <div class="bg-layer" id="bgLayer"></div>
+        <div class="bg-layer bg-layer--next" id="bgLayerNext"></div>
+
+        <!-- Floating particles container -->
+        <canvas id="particleCanvas"></canvas>
+
+    <!-- Main Banner Area -->
+    <main class="banner" id="banner">
+        <!-- Background Name (behind the shoe) -->
+        <div class="banner__name-bg" id="nameBg">
+            <div class="banner__name-bg-inner" id="nameBgInner">
+                ZARI RED
+            </div>
+        </div>
+
+        <!-- Shoe Image (foreground) -->
+        <div class="banner__shoe" id="shoeContainer">
+            <img class="banner__shoe-img" id="shoeImg" src="./zari-hero.png" alt="Joote Zari Red">
+        </div>
+
+        <!-- Product Info -->
+        <div class="banner__info" id="productInfo">
+            <div class="banner__info-craft" id="infoCraft">✦ ZARI CRAFT ✦</div>
+            <h1 class="banner__info-name" id="infoName">Joote Zari Red</h1>
+            <p class="banner__info-origin" id="infoOrigin">Surat & Varanasi</p>
+            <div class="banner__info-price" id="infoPrice">
+                <span class="banner__info-price-current">₹3,960</span>
+                <span class="banner__info-price-original">₹4,960</span>
+            </div>
+            <p class="banner__info-desc" id="infoDesc">Deep red finish, blending India's textile heritage with contemporary streetwear.</p>
+            <a class="banner__info-cta" id="infoCta" href="https://wearnaaw.com/product/naaw-zari-red" target="_blank">
+                SHOP NOW
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+
+        <!-- Status Badge -->
+        <div class="banner__status" id="statusBadge">IN STOCK</div>
+    </main>
+
+
+
+
+
+        <!-- Progress Bar -->
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-bar__fill" id="progressFill"></div>
+        </div>
+    </div> <!-- /hero-wrapper -->
+
+    <!-- Static Page Content -->
+    <main class="page-content" id="pageContent">
+        <section class="about-section" id="aboutSection">
+            <div class="container">
+                <h2 class="section-title">Built Different. <br>Walk Different.</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p class="lead">Founded in April 2026 by Adnan Yeolawala, Joote is more than a sneaker brand. It's a bridge between ancient Indian heritage and modern streetwear.</p>
+                        <p>Under Joote Fashion Private Limited, we bring authentic handcrafted techniques from across India directly to your feet. Every pair tells a story of tradition, patience, and meticulous skill.</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <span class="stat-num">4</span>
+                            <span class="stat-label">Heritage Crafts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">Handcrafted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="crafts-section">
+            <div class="container">
+                <h2 class="section-title">The Crafts</h2>
+                <div class="crafts-grid">
+                    <div class="craft-card">
+                        <h3>Kantha</h3>
+                        <p class="origin">Bengal, East India</p>
+                        <p>A centuries-old embroidery technique using running stitches to create intricate patterns and textures.</p>
+                    </div>
+                    <div class="craft-card">
+                        <h3>Zari</h3>
+                        <p class="origin">Surat & Varanasi</p>
+                        <p>Fine gold and silver thread woven into rich fabrics, bringing a royal touch to everyday wear.</p>
+                    </div>
+                    <div class="craft-card">
+                        <h3>Kasuti</h3>
+                        <p class="origin">Karnataka, South India</p>
+                        <p>Complex geometric patterns embroidered without tracing, requiring immense precision.</p>
+                    </div>
+                    <div class="craft-card">
+                        <h3>Chikankari</h3>
+                        <p class="origin">Lucknow, Uttar Pradesh</p>
+                        <p>Delicate and artful hand embroidery that breathes life into the upper canvas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="transition.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
